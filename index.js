@@ -48,9 +48,21 @@ $(function() {
         }
     });
 
-    $("#main").children().delay(300).each(function(){
-        $(this).delay(200 * ($(this).index() + 1)).animate({opacity:1},500);
-    });
+    //$("#main").children().delay(300).each(function(){
+     //   $(this).delay(200 * ($(this).index() + 1)).animate({opacity:1},500);
+    //});
+
+
+    function recurse(item){
+        item.children().delay(300).each(function(){
+            $(this).delay(200 * ($(this).index() +1)).animate(
+                {opacity:1}, 500, function(){
+                    recurse($(this));
+                });
+        })
+    }
+
+    recurse($("#main"));
 
 
     /*

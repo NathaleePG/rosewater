@@ -230,7 +230,7 @@ li span{
     overflow:hidden;
 }
 
-#main > p, #main > div{
+#main p, #main div{
     opacity:0;
 }
 
@@ -258,6 +258,7 @@ li span{
     margin-top:310px;
     right:-110px;
     font-style:italic;
+    opacity:0;
 
 }
 
